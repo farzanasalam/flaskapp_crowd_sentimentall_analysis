@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+
+<span style="margin-right: 10px;"></span>
+
+<section class="position-relative py-6 bg-white overflow-hidden">
+
+	<!-- build your own svg from https://fffuel.co/nnneon/ -->
+
+
+	<img class="position-absolute translate-middle top-50 start-0 d-none d-lg-block img-fluid wp-image-32820" src="https://lclibrary.b-cdn.net/sections/wp-content/uploads/sites/18/2022/05/nnneon.svg" width="800" height="800" srcset="" sizes="" alt="">
+
+
+
+	<div class="container">
+		<div class="row row-cols-1 row-cols-lg-2 g-4 g-md-5">
+			<div class="col px-lg-6">
+				<div class="card card-body border-0 text-light p-4 p-md-6 rounded-3" style="background:#2b3036">
+
+					<div class="lc-block d-flex justify-content-center align-items-center mb-5 rounded wp-image-32811 bg-primary" style="width: 96px; height: 96px;">
+
+					</div>
+					<div class="lc-block">
+						<div editable="rich">
+
+							<h4 class="display-6 fw-bold">Stress Analysis</h4>
+
+							<p class="lead">Stress analysis is a process used in engineering and materials science to assess how materials and structures behave under various loads and conditions.</p>
+							<form action="/stress_analysis">
+        						<button type="submit" class="btn btn-primary">View</button>
+    						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col px-lg-6 position-relative">
+
+				<div class="card card-body border-0 text-light p-4 p-md-6 rounded-3" style="background:#2b3036">
+					<div class="lc-block d-flex justify-content-center align-items-center mb-5 rounded bg-info" style="width: 96px; height: 96px;">
+
+					</div>
+					<div class="lc-block">
+						<div editable="rich">
+
+							<h4 class="display-6 fw-bold">Emotion detection</h4>
+							<p class="lead">The goal of emotion detection is to understand and interpret human emotions accurately, enabling applications such as affective computing, human-computer interaction, market research, and mental health monitoring.</p>
+							<form action="/video_feed">
+							<button class="btn btn-primary" type="text" onclick="redirectToVideoFeed()">View</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col px-lg-6">
+				<div class="card card-body border-0 text-light p-4 p-md-6 rounded-3" style="background:#2b3036">
+					<div class="lc-block d-flex justify-content-center align-items-center mb-5 rounded bg-success" style="width: 96px; height: 96px;">
+
+					</div>
+					<div class="lc-block">
+						<div editable="rich">
+
+							<h4 class="display-6 fw-bold">Event Cordination</h4>
+
+							<p class="lead"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="{{ url_for('video_feed') }}" width="640" height="480">
+
+		</div>
+	</div>
+
+
+
+</section>
+
+
+
+
+{% endblock %}

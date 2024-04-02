@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Analysis</title>
+</head>
+<body>
+    <h1>Stress Analysis</h1>
+    {% if alarm_message %}
+        <p>{{ alarm_message }}</p>  <!-- Display the alarm message -->
+    <audio controls autoplay>
+            <source src="{{ url_for('static', filename='security-alarm-80493.mp3') }}" type="audio/mpeg">
+
+    </audio>
+    {% endif %}
+
+</body>
+</html>
