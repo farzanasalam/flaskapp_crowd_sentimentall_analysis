@@ -1,0 +1,5 @@
+Flask==2.2.5
+opencv-python==4.8.1.78
+opencv-contrib-python==4.8.1.78
+DeepFace==0.0.79
+playsound==1.2.2
